@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>Fabcars Query</title>
+    </head>
+    <body>
+        <div class="container mt-2">
+            <h1>Car(s)</h1>
+            <h3><a href="/">Back to index</a></h3>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Car Number</th>
+                        <th scope="col">Make</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Colour</th>
+                        <th scope="col">Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- generate from cars[] -->
+                    <% cars.forEach((car) => { %>
+                        <tr>
+                            <td><%= car.carnumber %></td>
+                            <td><%= car.make %></td>
+                            <td><%= car.model %></td>
+                            <td><%= car.colour %></td>
+                            <td><%= car.owner %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

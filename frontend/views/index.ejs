@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>Fabcars</title>
+    </head>
+    <body>
+        <div class="container mt-2">
+            <h1>Fabcars</h1>
+            
+            <h3>Queries</h3>
+            <!-- Button(not link): Query All Cars -->
+            <form action="/queryAllCars" method="get">
+                <button type="submit" class="btn btn-primary">Query All Cars</button>
+            </form><br>
+            <!-- Form to GET Query Car, param: carnumber -->
+            <form action="/queryCar" method="get">
+                <div class="mb-3">
+                    <label for="carnumber" class="form-label">Car Number</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="carnumber"
+                        name="carnumber"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">Query Car</button>
+            </form><br>
+
+            <h3>Create Car</h3>
+            <!-- Form to POST Create Car -->
+            <form action="/createCar" method="post">
+                <div class="mb-3">
+                    <label for="carnumber" class="form-label">Car Number</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="carnumber"
+                        name="carnumber"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="make" class="form-label">Make</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="make"
+                        name="make"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="model" class="form-label">Model</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="model"
+                        name="model"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="colour" class="form-label">Colour</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="colour"
+                        name="colour"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="owner" class="form-label">Owner</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="owner"
+                        name="owner"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">Create Car</button>
+            </form><br>
+
+            <h3>Change Car Owner</h3>
+            <!-- Form to POST Change Car Owner -->
+            <form action="/changeCarOwner" method="post">
+                <div class="mb-3">
+                    <label for="carnumber" class="form-label">Car Number</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="carnumber"
+                        name="carnumber"
+                        required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="newowner" class="form-label">New Owner</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="newowner"
+                        name="newowner"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">Change Car Owner</button>
+            </form>
+        </div>
+    </body>
+</html>
